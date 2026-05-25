@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body class="{{ page.body_class }}">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Wenhao He home">
+        <span class="brand-mark">WH</span>
+        <span>Wenhao He</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/resume/' | relative_url }}">Resume</a>
+        <a href="mailto:{{ site.author.email }}">Email</a>
+        <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+      </nav>
+    </header>
+    <main id="main">
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      <p>© {{ 'now' | date: '%Y' }} Wenhao He</p>
+      <p>Deep learning · Adversarial training · Trustworthy AI</p>
+    </footer>
+  </body>
+</html>

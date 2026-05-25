@@ -1,0 +1,18 @@
+title: Wenhao He
+description: Personal homepage of Wenhao He, a computer science graduate student researching deep learning, adversarial training, and trustworthy AI.
+url: "https://hhhhao123.github.io"
+baseurl: ""
+lang: en
+
+author:
+  name: Wenhao He
+  email: dtwh0423@gmail.com
+  github: hhhhao123
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
