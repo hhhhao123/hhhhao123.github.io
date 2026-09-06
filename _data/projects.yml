@@ -1,0 +1,18 @@
+- title: 时息 Shixi
+  kind: Windows 小组件
+  description: "一个 Windows 11 久坐提醒小组件。工作一段时间后，它会提醒你起来休息，平时安静地待在系统托盘里。免安装，不联网，也不记录使用历史。"
+  image: /assets/images/shixi-hero.webp
+  image_alt: "时息的 Windows 11 极简倒计时界面"
+  image_width: 1672
+  image_height: 941
+  repository: "https://github.com/hhhhao123/Shixi"
+  download: "https://github.com/hhhhao123/Shixi/releases/latest"
+
+- title: Personal Homepage Builder
+  kind: Codex Skill
+  description: "一个用来设计个人主页的 Codex skill。它会先梳理个人定位、内容和视觉方向，再生成适合 GitHub Pages 的主页。"
+  image: /assets/images/personal-homepage-builder.webp
+  image_alt: "Personal Homepage Builder 项目封面"
+  image_width: 1774
+  image_height: 887
+  repository: "https://github.com/hhhhao123/personal-homepage-builder"

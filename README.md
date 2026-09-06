@@ -1,6 +1,6 @@
 # Wenhao He Personal Homepage
 
-Personal academic homepage for `https://hhhhao123.github.io`, built with Jekyll.
+Personal homepage for `https://hhhhao123.github.io`, built with Jekyll and hosted on GitHub Pages.
 
 ## Local Preview
 

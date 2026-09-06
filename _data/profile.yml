@@ -1,0 +1,17 @@
+name: Wenhao He
+short_name: Wenhao
+intro: "我是 Wenhao，计算机硕士在读。"
+headline_lines:
+  - "研究 VLA 安全，"
+  - "也做些小工具。"
+summary: "这个页面放着我最近在做的事，还有已经做出来的项目。"
+education: "西北工业大学计算机专业硕士在读，本科毕业于郑州大学。"
+now:
+  - label: 科研
+    text: "现在在做 VLA 相关的安全研究。"
+  - label: 空闲
+    text: "做些贴近日常的小组件。想到什么，就先试着做出来。"
+quote: "保持热爱，可抵岁月漫长。"
+favorites: "平时听陶喆，看美剧和英剧。游戏只玩 CSGO，也看比赛。"
+github: "https://github.com/hhhhao123"
+email: "dtwh0423@gmail.com"

@@ -1,37 +1,37 @@
 <!doctype html>
-<html lang="{{ site.lang | default: 'en' }}">
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ page.description | default: site.description }}">
-    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23071315'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial,sans-serif' font-size='20' font-weight='700' fill='%23f7f8f3'%3EWH%3C/text%3E%3C/svg%3E">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..760,40..100&family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>document.documentElement.classList.add("has-js");</script>
+    <meta name="theme-color" content="#f1faee">
+    <meta property="og:title" content="{% if page.title and page.title != 'Home' %}{{ page.title }} | {% endif %}{{ site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | absolute_url }}">
+    <title>{% if page.title and page.title != 'Home' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    <link rel="canonical" href="{{ page.url | absolute_url }}">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a2332'/%3E%3Ctext x='32' y='39' text-anchor='middle' font-family='Arial,sans-serif' font-size='20' font-weight='700' fill='%23f1faee'%3EWH%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   </head>
   <body class="{{ page.body_class }}">
-    <a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">{% if page.lang == 'en' %}Skip to content{% else %}跳到主要内容{% endif %}</a>
     <header class="site-header">
-      <a class="brand" href="{{ '/' | relative_url }}" aria-label="Wenhao He home">
-        <span class="brand-mark">WH</span>
-        <span>Wenhao He</span>
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="返回 Wenhao He 首页">
+        Wenhao He
       </a>
-      <nav class="site-nav" aria-label="Primary navigation">
-        <a href="{{ '/' | relative_url }}">Home</a>
-        <a href="{{ '/resume/' | relative_url }}">Resume</a>
-        <a href="mailto:{{ site.author.email }}">Email</a>
-        <a href="https://github.com/{{ site.author.github }}">GitHub</a>
-      </nav>
+      <a class="header-link" href="https://github.com/{{ site.author.github }}" rel="me">GitHub</a>
     </header>
     <main id="main">
       {{ content }}
     </main>
     <footer class="site-footer">
-      <p>&copy; {{ 'now' | date: '%Y' }} Wenhao He</p>
-      <p>Deep learning &middot; Adversarial training &middot; Trustworthy AI</p>
+      <p class="footer-name">Wenhao He</p>
+      <div class="footer-links" aria-label="联系方式">
+        <a href="https://github.com/{{ site.author.github }}" rel="me">GitHub</a>
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+      </div>
+      <p class="footer-meta">&copy; {{ 'now' | date: '%Y' }} Wenhao He</p>
     </footer>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   </body>
