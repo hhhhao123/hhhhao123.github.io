@@ -5,8 +5,8 @@ description: Wenhao He 的个人主页，记录 VLA 安全研究、日常小组�
 body_class: home-page
 ---
 
-<section class="hero" aria-labelledby="hero-title">
-  <div class="hero-copy reveal">
+<section class="home-intro" aria-labelledby="hero-title">
+  <div class="intro-copy reveal">
     <p class="hero-intro">{{ site.data.profile.intro }}</p>
     <h1 id="hero-title">
       {% for line in site.data.profile.headline_lines %}<span>{{ line }}</span>{% endfor %}
@@ -40,14 +40,14 @@ body_class: home-page
   </div>
 </section>
 
-<section class="now-section section-shell" aria-labelledby="now-title">
-  <div class="section-heading reveal">
+<section class="now-strip" aria-labelledby="now-title">
+  <div class="now-heading reveal">
     <h2 id="now-title">最近</h2>
     <p>刚读研，项目、材料和科研一下子都来了。</p>
   </div>
-  <div class="now-list reveal">
+  <div class="now-list-v2 reveal">
     {% for item in site.data.profile.now %}
-      <article class="now-item">
+      <article class="now-entry">
         <p>{{ item.label }}</p>
         <h3>{{ item.text }}</h3>
       </article>
@@ -55,19 +55,21 @@ body_class: home-page
   </div>
 </section>
 
-<section class="work-section section-shell" id="work" aria-labelledby="work-title">
-  <div class="work-heading reveal">
-    <h2 id="work-title">做出来的东西</h2>
+<section class="work-feed" id="work" aria-labelledby="work-title">
+  <div class="work-feed-heading reveal">
+    <div>
+      <h2 id="work-title">做出来的东西</h2>
+    </div>
     <p>先解决自己的问题，再把它整理成别人也能用的东西。</p>
   </div>
 
-  <div class="project-list">
+  <div class="work-feed-list">
     {% for project in site.data.projects %}
-      <article class="project project-{{ forloop.index }} reveal">
-        <a class="project-image-link" href="{{ project.repository }}" aria-label="查看 {{ project.title }} 仓库">
+      <article class="work-card work-card-{{ forloop.index }} reveal">
+        <a class="work-card-image" href="{{ project.repository }}" aria-label="查看 {{ project.title }} 仓库">
           <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt }}" loading="lazy" width="{{ project.image_width }}" height="{{ project.image_height }}">
         </a>
-        <div class="project-copy">
+        <div class="work-card-copy">
           <p class="project-kind">{{ project.kind }}</p>
           <h3>{{ project.title }}</h3>
           <p>{{ project.description }}</p>
@@ -83,13 +85,15 @@ body_class: home-page
   </div>
 </section>
 
-<section class="personal-section section-shell" aria-labelledby="personal-title">
-  <div class="quote-block reveal">
-    <p>{{ site.data.profile.quote }}</p>
-  </div>
-  <div class="favorites-block reveal">
+<section class="personal-note-section" aria-labelledby="personal-title">
+  <div class="personal-copy reveal">
     <h2 id="personal-title">平时</h2>
     <p>{{ site.data.profile.favorites }}</p>
   </div>
-  <p class="education-line reveal">{{ site.data.profile.education }}</p>
+  <div class="closing-note reveal">
+    <blockquote>
+      <p>{{ site.data.profile.quote }}</p>
+    </blockquote>
+    <p class="education-line">{{ site.data.profile.education }}</p>
+  </div>
 </section>

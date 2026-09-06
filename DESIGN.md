@@ -1,8 +1,8 @@
-# Wenhao He Homepage Design Guide
+# Wenhao He Homepage Design Guide v2
 
 ## Direction
 
-The site is a bright personal archive with the loose rhythm of a digital desk. It introduces Wenhao as a whole person: a graduate student researching VLA safety, someone who builds useful small tools, and someone who listens to David Tao, watches US and UK television, and follows CSGO.
+The site is a compact, bright personal stream rather than a sequence of portfolio panels. It introduces Wenhao as a whole person: a graduate student researching VLA safety, someone who builds useful small tools, and someone who listens to David Tao, watches US and UK television, and follows CSGO.
 
 The page should feel direct, calm, and lived-in. It is not an academic profile, a product directory, or a themed developer dashboard.
 
@@ -14,11 +14,12 @@ The page should feel direct, calm, and lived-in. It is not an academic profile, 
 - Accent: teal `#2d7778`; seafoam is a supporting surface, not a competing accent.
 - Typography: one Chinese-first system sans-serif stack for both Chinese and English. Headlines use moderate weight, natural Chinese spacing, and a restrained scale; monospace is reserved for the turntable's instrument labels.
 - Shape: large surfaces use soft 18-28px corners; action buttons may use full pill corners.
-- Layout: asymmetric section compositions, real project images, and generous spacing. Avoid uniform card grids.
+- Layout: one continuous 960px content rail. The intro, current work, selected projects, and personal notes should feel connected rather than occupying separate full-height screens.
+- Project hierarchy: Shixi is the full-width featured project; Personal Homepage Builder is a compact secondary project. Avoid alternating portfolio rows.
 
 ## Signature Element
 
-The turntable is the single expressive visual on the first screen. It keeps the record motif from the previous site, but removes all research metrics, waveform decoration, and fake audio controls. Clicking the record only pauses or resumes its rotation.
+The turntable remains the signature visual, but it is a compact object beside the introduction rather than half of a full-screen hero. Clicking the record pauses or resumes its rotation and moves the tonearm.
 
 ## Content Rules
 
