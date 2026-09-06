@@ -12,7 +12,7 @@ The page should feel direct, calm, and lived-in. It is not an academic profile, 
 - Background: cream `#f1faee` with paper `#f8fbf6` for quiet section changes.
 - Text: deep navy `#1a2332` with soft navy `#314154` for secondary copy.
 - Accent: teal `#2d7778`; seafoam is a supporting surface, not a competing accent.
-- Typography: system sans-serif for Chinese and English, with a system monospace used only for compact utility labels.
+- Typography: one Chinese-first system sans-serif stack for both Chinese and English. Headlines use moderate weight, natural Chinese spacing, and a restrained scale; monospace is reserved for the turntable's instrument labels.
 - Shape: large surfaces use soft 18-28px corners; action buttons may use full pill corners.
 - Layout: asymmetric section compositions, real project images, and generous spacing. Avoid uniform card grids.
 
@@ -29,11 +29,14 @@ The turntable is the single expressive visual on the first screen. It keeps the 
 - Projects with a usable release may also show a download link.
 - GitHub and email remain visible in the footer.
 
-## Motion
+## Motion (v1.1)
 
 - The record rotates slowly and can be paused by the visitor.
-- Sections reveal once with a small opacity and vertical transition.
-- Project images respond slightly on hover and keyboard focus.
+- Pausing the record also lifts the tonearm to make the state change visible.
+- A thin header line shows reading progress without adding navigation clutter.
+- Hero lines and grouped content reveal in a short, staggered sequence.
+- Project images and copy respond slightly on hover and keyboard focus.
+- A very soft seafoam light settles into place with the turntable; the record remains the only continuous motion.
 - All animation stops when `prefers-reduced-motion` is enabled.
 - Do not add parallax, particles, scroll hijacking, or autoplay audio.
 

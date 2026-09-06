@@ -1,7 +1,27 @@
-document.documentElement.classList.add("has-js");
-
 const revealItems = document.querySelectorAll(".reveal");
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const scrollProgress = document.querySelector(".scroll-progress");
+
+const updateScrollProgress = () => {
+  if (!scrollProgress) return;
+  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+  scrollProgress.style.setProperty("--scroll-progress", String(Math.min(Math.max(progress, 0), 1)));
+};
+
+let scrollFrame = null;
+
+const requestScrollProgressUpdate = () => {
+  if (scrollFrame !== null) return;
+  scrollFrame = window.requestAnimationFrame(() => {
+    updateScrollProgress();
+    scrollFrame = null;
+  });
+};
+
+updateScrollProgress();
+window.addEventListener("scroll", requestScrollProgressUpdate, { passive: true });
+window.addEventListener("resize", requestScrollProgressUpdate);
 
 const showAll = () => {
   revealItems.forEach((item) => item.classList.add("is-visible"));
@@ -18,7 +38,7 @@ if (reducedMotionQuery.matches || !("IntersectionObserver" in window)) {
         observer.unobserve(entry.target);
       });
     },
-    { threshold: 0.14 }
+    { threshold: 0.12, rootMargin: "0px 0px -7%" }
   );
 
   revealItems.forEach((item) => observer.observe(item));
